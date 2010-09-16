@@ -21,16 +21,16 @@
 	 */
 
     //echo $this->Form->create( 'Category', array( 'url' => array( 'controller' => 'categories', 'action' => 'mass', 'admin' => 'true' ) ) );
-        $massActions = $this->Core->massActionButtons(
-            array(
-                //'add',
-                //'edit',
-                //'toggle',
-                //'copy',
-                //'delete'
-            )
-        );
-        echo $this->Core->adminIndexHead( $this, null, $massActions );
+	$massActions = $this->Core->massActionButtons(
+		array(
+			//'add',
+			//'edit',
+			//'toggle',
+			//'copy',
+			//'delete'
+		)
+	);
+	echo $this->Infinitas->adminIndexHead($filterOptions, $massActions);
 ?>
 <div class="table">
     <table class="listing" cellpadding="0" cellspacing="0">
