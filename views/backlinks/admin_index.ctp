@@ -21,7 +21,7 @@
 	 */
 
     //echo $this->Form->create( 'Category', array( 'url' => array( 'controller' => 'categories', 'action' => 'mass', 'admin' => 'true' ) ) );
-	$massActions = $this->Core->massActionButtons(
+	$massActions = $this->Infinitas->massActionButtons(
 		array(
 			//'add',
 			//'edit',
@@ -30,12 +30,12 @@
 			//'delete'
 		)
 	);
-	echo $this->Infinitas->adminIndexHead($filterOptions, $massActions);
+	echo $this->Infinitas->adminIndexHead(null, $massActions);
 ?>
 <div class="table">
     <table class="listing" cellpadding="0" cellspacing="0">
         <?php
-            echo $this->Core->adminTableHeader(
+            echo $this->Infinitas->adminTableHeader(
                 array(
 					__('Publishe', true) => array(
                         'style' => 'width:100px;'
@@ -52,10 +52,9 @@
             );
 
             $i = 0;
-            foreach( $data as $link )
-            {
+            foreach($data as $link){
                 ?>
-                    <tr class="<?php echo $this->Core->rowClass(); ?>">
+                    <tr class="<?php echo $this->Infinitas->rowClass(); ?>">
 						<td><?php echo $link['Backlink']['publisher']; ?></td>
 						<td><?php echo $this->Html->link($link['Backlink']['title'], $link['Backlink']['link']); ?></td>
 						<td><?php echo $link['Backlink']['description']; ?></td>

@@ -79,6 +79,6 @@
 		function __construct($id = false, $table = null, $ds = null) {
 			parent::__construct($id, $table, $ds);
 
-			$this->request['uri']['query']['q'] = str_replace('%site%', 'http://cakephp.org', $this->request['uri']['query']['q']);
+			$this->request['uri']['query']['q'] = str_replace('%site%', Router::url('/', true), $this->request['uri']['query']['q']);
 		}
 	}
