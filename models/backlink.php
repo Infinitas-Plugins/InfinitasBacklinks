@@ -6,7 +6,7 @@
 	class Backlink extends BacklinksAppModel{
 		var $name = 'Backlink';
 
-		var $useDbConfig = 'xml';
+		var $useDbConfig = 'backlink';
 
 		var $actsAs = false;
 

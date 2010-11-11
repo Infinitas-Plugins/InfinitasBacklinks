@@ -22,4 +22,12 @@
 
 			return $menu;
 		}
+
+		public function onRequireDatabaseConfigs(&$event){
+			return array(
+				'backlink' => array(
+					'datasource' => 'Libs.Xml'
+				)
+			);
+		}
 	}
