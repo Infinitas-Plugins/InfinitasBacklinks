@@ -79,6 +79,11 @@
 		function __construct($id = false, $table = null, $ds = null) {
 			parent::__construct($id, $table, $ds);
 
-			$this->request['uri']['query']['q'] = str_replace('%site%', Router::url('/', true), $this->request['uri']['query']['q']);
+			/**
+			 * router is not loaded.
+			 */
+			if(php_sapi_name() != 'cli'){
+				$this->request['uri']['query']['q'] = str_replace('%site%', Router::url('/', true), $this->request['uri']['query']['q']);
+			}
 		}
 	}
