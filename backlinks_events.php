@@ -15,7 +15,7 @@
 		public function onSetupCache(){
 		}
 
-		public function onAdminMenu(&$event){
+		public function onAdminMenu($event){
 			$menu['main'] = array(
 				'Backlinks' => array('controller' => false, 'action' => false)
 			);
@@ -23,7 +23,7 @@
 			return $menu;
 		}
 
-		public function onRequireDatabaseConfigs(&$event){
+		public function onRequireDatabaseConfigs($event){
 			return array(
 				'backlink' => array(
 					'datasource' => 'Libs.Xml'
