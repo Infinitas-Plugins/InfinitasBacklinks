@@ -12,7 +12,7 @@
 
 		function admin_index(){
 			$address = env('SERVER_ADDR');
-			if($address == '127.0.0.1' || $address = '::1'){
+			if($address == '127.0.0.1' || $address == '::1'){
 				$this->notice(
 					__('This plugin does not work on localhost', true),
 					array(
