@@ -4,7 +4,7 @@
 			return array(
 				'name' => 'Backlinks',
 				'description' => 'See who is linking back to your site',
-				'icon' => '/backlinks/img/icon.png',
+				'icon' => '/Backlinks/img/icon.png',
 				'author' => 'Infinitas'
 			);
 		}
@@ -26,7 +26,7 @@
 		public function onRequireDatabaseConfigs($event){
 			return array(
 				'backlink' => array(
-					'datasource' => 'Libs.Xml'
+					'datasource' => 'Backlinks.Xml'
 				)
 			);
 		}

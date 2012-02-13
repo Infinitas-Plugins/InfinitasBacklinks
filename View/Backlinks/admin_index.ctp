@@ -37,17 +37,17 @@
         <?php
             echo $this->Infinitas->adminTableHeader(
                 array(
-					__('Publishe', true) => array(
+					__('Publishe') => array(
                         'style' => 'width:100px;'
                     ),
-					__('Title', true) => array(
+					__('Title') => array(
                         'style' => 'width:150px;'
                     ),
-					__('Description', true),
-					__('Creator', true) => array(
+					__('Description'),
+					__('Creator') => array(
                         'style' => 'width:100px;'
                     ),
-					__('Date', true)
+					__('Date')
                 )
             );
 
