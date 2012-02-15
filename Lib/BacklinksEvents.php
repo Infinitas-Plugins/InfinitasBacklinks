@@ -8,7 +8,7 @@
 				'author' => 'Infinitas'
 			);
 		}
-		
+
 		public function onSetupConfig(){
 		}
 
@@ -26,7 +26,7 @@
 		public function onRequireDatabaseConfigs($event){
 			return array(
 				'backlink' => array(
-					'datasource' => 'Backlinks.Xml'
+					'datasource' => 'Libs.XmlSource'
 				)
 			);
 		}
