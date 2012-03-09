@@ -1,5 +1,5 @@
 <?php
-	final class BacklinksEvents extends AppEvents{
+	final class BacklinksEvents extends AppEvents {
 		public function onPluginRollCall(){
 			return array(
 				'name' => 'Backlinks',
@@ -7,9 +7,6 @@
 				'icon' => '/Backlinks/img/icon.png',
 				'author' => 'Infinitas'
 			);
-		}
-
-		public function onSetupConfig(){
 		}
 
 		public function onSetupCache(){
