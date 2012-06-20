@@ -52,7 +52,7 @@
             );
 
             $i = 0;
-            foreach($data as $link){
+            foreach($data as $link) {
                 ?>
                     <tr class="<?php echo $this->Infinitas->rowClass(); ?>">
 						<td><?php echo $link['Backlink']['publisher']; ?></td>
