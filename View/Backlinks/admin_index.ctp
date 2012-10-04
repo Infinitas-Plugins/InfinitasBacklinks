@@ -59,7 +59,7 @@
 						<td><?php echo $this->Html->link($link['Backlink']['title'], $link['Backlink']['link']); ?></td>
 						<td><?php echo $link['Backlink']['description']; ?></td>
 						<td><?php echo $link['Backlink']['creator']; ?></td>
-						<td><?php echo $this->Time->niceShort($link['Backlink']['date']); ?></td>
+						<td><?php echo $this->Infinitas->date($link['Backlink']['date']); ?></td>
                     </tr>
                 <?php
                 $i++;
