@@ -13,12 +13,6 @@ class BacklinksEvents extends AppEvents {
 	}
 
 /**
- * @brief set up plugin cache
- */
-	public function onSetupCache() {
-	}
-
-/**
  * @brief build the admin menu
  */
 	public function onAdminMenu($event) {
