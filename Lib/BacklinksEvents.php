@@ -3,7 +3,7 @@ class BacklinksEvents extends AppEvents {
 /**
  * @brief get the plugins details
  */
-	public function onPluginRollCall() {
+	public function onPluginRollCall(Event $Event) {
 		return array(
 			'name' => 'Backlinks',
 			'description' => 'See who is linking back to your site',
@@ -15,7 +15,7 @@ class BacklinksEvents extends AppEvents {
 /**
  * @brief build the admin menu
  */
-	public function onAdminMenu($event) {
+	public function onAdminMenu(Event $Event) {
 		$menu = array(
 			'main' => array(
 				'Backlinks' => array('controller' => false, 'action' => false)
@@ -28,7 +28,7 @@ class BacklinksEvents extends AppEvents {
 /**
  * @brief load additional db configs
  */
-	public function onRequireDatabaseConfigs($event) {
+	public function onRequireDatabaseConfigs(Event $Event) {
 		return array(
 			'backlink' => array(
 				'datasource' => 'Libs.XmlSource'
