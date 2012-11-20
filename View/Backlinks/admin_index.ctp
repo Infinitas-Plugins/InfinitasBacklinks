@@ -21,50 +21,36 @@
 	 */
 
     //echo $this->Form->create( 'Category', array( 'url' => array( 'controller' => 'categories', 'action' => 'mass', 'admin' => 'true' ) ) );
-	$massActions = $this->Infinitas->massActionButtons(
-		array(
-			//'add',
-			//'edit',
-			//'toggle',
-			//'copy',
-			//'delete'
-		)
-	);
-	echo $this->Infinitas->adminIndexHead(null, $massActions);
+	echo $this->Infinitas->adminIndexHead(null, false);
 ?>
-<div class="table">
-    <table class="listing" cellpadding="0" cellspacing="0">
-        <?php
-            echo $this->Infinitas->adminTableHeader(
-                array(
-					__('Publishe') => array(
-                        'style' => 'width:100px;'
-                    ),
-					__('Title') => array(
-                        'style' => 'width:150px;'
-                    ),
-					__('Description'),
-					__('Creator') => array(
-                        'style' => 'width:100px;'
-                    ),
-					__('Date')
-                )
-            );
+<table class="listing">
+	<?php
+		echo $this->Infinitas->adminTableHeader(array(
+			__('Publishe') => array(
+				'style' => 'width:100px;'
+			),
+			__('Title') => array(
+				'style' => 'width:150px;'
+			),
+			__('Description'),
+			__('Creator') => array(
+				'style' => 'width:100px;'
+			),
+			__('Date') => array(
+				'class' => 'date'
+			)
+		));
 
-            $i = 0;
-            foreach($data as $link) {
-                ?>
-                    <tr class="<?php echo $this->Infinitas->rowClass(); ?>">
-						<td><?php echo $link['Backlink']['publisher']; ?></td>
-						<td><?php echo $this->Html->link($link['Backlink']['title'], $link['Backlink']['link']); ?></td>
-						<td><?php echo $link['Backlink']['description']; ?></td>
-						<td><?php echo $link['Backlink']['creator']; ?></td>
-						<td><?php echo $this->Time->niceShort($link['Backlink']['date']); ?></td>
-                    </tr>
-                <?php
-                $i++;
-            }
-        ?>
-    </table>
-    <?php echo $this->Form->end(); ?>
-</div>
+		foreach($data as $link) { ?>
+			<tr>
+				<td><?php echo $link['Backlink']['publisher']; ?>&nbsp;</td>
+				<td><?php echo $this->Html->link($link['Backlink']['title'], $link['Backlink']['link']); ?>&nbsp;</td>
+				<td><?php echo $link['Backlink']['description']; ?>&nbsp;</td>
+				<td><?php echo $link['Backlink']['creator']; ?>&nbsp;</td>
+				<td><?php echo $this->Infinitas->date($link['Backlink']['date']); ?>&nbsp;</td>
+			</tr> <?php
+		}
+	?>
+</table>
+<?php
+	//echo $this->Form->end();
