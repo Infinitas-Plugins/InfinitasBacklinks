@@ -82,7 +82,7 @@
 			/**
 			 * router is not loaded.
 			 */
-			if(php_sapi_name() != 'cli'){
+			if(php_sapi_name() != 'cli') {
 				$this->request['uri']['query']['q'] = str_replace('%site%', Router::url('/', true), $this->request['uri']['query']['q']);
 			}
 		}
